@@ -21,7 +21,7 @@ class Display(object):
 
         for event in sdl2.ext.get_events():
             if event.type == sdl2.SDL_QUIT:
-                print("Quitting")
+                # print("Quitting")
                 exit(0)
 
         img = numpy.insert(img, 3, 255, axis=2)  # add alpha
@@ -31,13 +31,3 @@ class Display(object):
         window.refresh()
 
 
-    #def paint(self, img):
-    #     print("in paint")
-    #     for event in sdl2.ext.get_events():
-    #         if event.type == sdl2.SDL_QUIT:
-    #             print("Quitting")
-    #             exit(0)
-    #     surf = sdl2.ext.pixels3d(self.window.get_surface())
-    #     surf[:, :, 0:3] = img.swapaxes(0, 1)
-    #
-    #     self.window.refresh()
